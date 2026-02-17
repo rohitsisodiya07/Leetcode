@@ -1,12 +1,5 @@
 class Solution {
 public:
-    void swapp(char& i, char& j) {
-
-        char temp = i;
-        i = j;
-        j = temp;
-    }
-
     bool isVowel(char key) {
 
         string vowel = "aeiouAEIOU";
@@ -27,7 +20,7 @@ public:
                 i++;
             while (i < j && !isVowel(str[j]))
                 j--;
-            swapp(str[i], str[j]);
+            swap(str[i], str[j]);
             i++;
             j--;
         }
