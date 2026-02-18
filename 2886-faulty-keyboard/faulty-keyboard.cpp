@@ -2,16 +2,14 @@ class Solution {
 public:
     string finalString(string s) {
 
-        string rev = "";
+        string res = "";
         for (auto ch : s) {
 
             if (ch == 'i') {
-
-                reverse(rev.begin(), rev.end()) ;
-            } else {
-                rev += ch;
-            }
+                reverse(res.begin(), res.end());
+            } else
+                res += ch;
         }
-        return rev ;
+        return res ;
     }
 };
