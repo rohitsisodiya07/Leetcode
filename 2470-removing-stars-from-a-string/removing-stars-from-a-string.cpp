@@ -13,13 +13,13 @@ public:
                 st.push(ch);
             }
         }
-        string ans = "";
+        string res = "";
         while (!st.empty()) {
 
-            ans += st.top();
+            res += st.top();
             st.pop();
         }
-        reverse(ans.begin(), ans.end());
-        return ans;
+        reverse(res.begin(), res.end());
+        return res;
     }
 };
