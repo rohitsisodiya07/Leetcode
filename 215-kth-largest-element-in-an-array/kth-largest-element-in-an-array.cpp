@@ -15,6 +15,6 @@ public:
                 return largest;
             }
         }
-        return largest ;
+        return largest;
     }
 };
