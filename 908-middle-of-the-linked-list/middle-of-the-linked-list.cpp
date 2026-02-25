@@ -16,7 +16,6 @@ public:
             remp = remp->next;
             length--;
         }
-        head = remp;
-        return head;
+        return remp ;
     }
 };
