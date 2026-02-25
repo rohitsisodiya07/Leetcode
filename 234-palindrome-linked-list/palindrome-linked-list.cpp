@@ -1,21 +1,26 @@
+
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
-        
-        vector <int> store ;
+        stack <int> st ;
         ListNode *temp = head ;
-        while(temp!=NULL){
-            store.push_back(temp->val) ;
-            temp = temp->next ;
-        }
-        int i = 0 ; 
-        int j = store.size() - 1 ;
-        while( i < j ){
+        int count = 0 ;
+        while( temp!= NULL ){
 
-            if( store[i] != store[j]) return false ;
-            i++ ;
-            j-- ;
+                st.push(temp->val) ;
+                temp = temp->next ;
+                count++ ;
+        }
+        int length = (count/2) ;
+        ListNode *remp = head ;
+        while(length){
+
+            if( remp->val != st.top() ) return false ;
+            st.pop() ;
+            remp = remp->next ;
+            length-- ;
         }
         return true ;
+
     }
 };
