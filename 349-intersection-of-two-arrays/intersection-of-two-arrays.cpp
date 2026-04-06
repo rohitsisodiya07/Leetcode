@@ -2,8 +2,8 @@ class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
         
-        set <int> st1 ;
-        set <int> st2 ;
+        unordered_set <int> st1 ;
+        unordered_set <int> st2 ;
         vector <int> v ;
 
         for( auto ch : nums1){
